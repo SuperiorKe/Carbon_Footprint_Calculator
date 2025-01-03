@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What type of vehicle do you primarily use?",
+      "choices": ["Gasoline car", "Diesel car", "Electric car", "Hybrid car", "Motorcycle", "Public transportation", "Bicycle/Walk", "None"],
+      "tip": "Select the vehicle you use most often for daily travel."
+    },
+    {
+      "id": 2,
+      "question": "How many kilometers/miles do you drive weekly?",
+      "choices": ["0-50", "51-100", "101-200", "201-500", "500+"],
+      "tip": "Include both personal and work-related driving."
+    },
+    {
+      "id": 3,
+      "question": "What type of engine does your vehicle have?",
+      "choices": ["Petrol", "Diesel", "Electric", "Hybrid", "Hydrogen"],
+      "tip": "Engine type affects fuel efficiency and emissions."
+    },
+    {
+      "id": 4,
+      "question": "How many flights do you take annually?",
+      "choices": ["0", "1-2 short-haul", "3-5 short-haul", "1-2 long-haul", "3+ long-haul"],
+      "tip": "Flights are a significant contributor to carbon emissions."
+    },
+    {
+      "id": 5,
+      "question": "What is your primary source of home energy?",
+      "choices": ["Grid electricity", "Solar power", "Wind power", "Gas", "Oil"],
+      "tip": "Different energy sources have varying carbon footprints."
+    },
+    {
+      "id": 6,
+      "question": "How much electricity do you consume monthly (in kWh)?",
+      "choices": ["<100 kWh", "100-300 kWh", "300-500 kWh", "500-1000 kWh", "1000+ kWh"],
+      "tip": "Check your electricity bill for this information."
+    },
+    {
+      "id": 7,
+      "question": "How often do you eat meat?",
+      "choices": ["Never", "1-2 times a week", "3-5 times a week", "Daily"],
+      "tip": "Meat consumption has a higher carbon footprint compared to plant-based diets."
+    },
+    {
+      "id": 8,
+      "question": "How often do you consume dairy products?",
+      "choices": ["Never", "1-2 times a week", "3-5 times a week", "Daily"],
+      "tip": "Dairy farming also has a significant environmental impact."
+    },
+    {
+      "id": 9,
+      "question": "Do you eat locally sourced or seasonal foods?",
+      "choices": ["Always", "Often", "Rarely", "Never"],
+      "tip": "Local and seasonal foods typically have a lower carbon footprint."
+    },
+    {
+      "id": 10,
+      "question": "How much waste do you produce weekly?",
+      "choices": ["0-10 kg", "11-20 kg", "21-30 kg", "31-50 kg", "50+ kg"],
+      "tip": "Estimate based on your household waste output."
+    },
+    {
+      "id": 11,
+      "question": "Do you recycle?",
+      "choices": ["Yes, all materials", "Some materials", "No"],
+      "tip": "Recycling reduces the amount of waste that ends up in landfills."
+    },
+    {
+      "id": 12,
+      "question": "Do you compost organic waste?",
+      "choices": ["Yes", "No"],
+      "tip": "Composting can significantly reduce your carbon footprint."
+    }
+  ]
+}

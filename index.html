@@ -1,0 +1,35 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Footprint Calculator Logo" class="logo">
+            <h1>Footprint Calculator</h1>
+        </div>
+    </header>
+    <div class="container">
+        <main id="main-section">
+            <div class="progress-bar-container">
+                <span class="progress-label">Step <span id="step-number">1</span> of <span id="total-steps"></span></span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <!-- Question sections will be dynamically inserted here -->
+        </main>
+        <div class="button-container">
+            <button id="back-button" class="button" disabled>Back</button>
+            <button id="next-button" class="button">Next Question</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
