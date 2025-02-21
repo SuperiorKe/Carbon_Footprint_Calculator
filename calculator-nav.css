@@ -1,0 +1,88 @@
+/* calculator-nav.css */
+.calc-header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.calc-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color, #4CAF50);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.back-home {
+    text-decoration: none;
+    color: var(--primary-color, #4CAF50);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color, #4CAF50);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background-color: var(--primary-color, #4CAF50);
+    color: white;
+}
+
+/* Update your existing container class to account for the fixed header */
+.container {
+    margin-top: 80px; /* Adjust this value based on your header height */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .calc-nav {
+        padding: 1rem;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 24px;
+    }
+    
+    .back-home {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,279 @@
+{
+    "questions": [
+        {
+            "category": "Food",
+            "question": "How would you best describe your diet?",
+            "options": [
+                "Meat in every meal",
+                "Meat in some meals",
+                "No beef",
+                "Meat very rarely",
+                "Vegetarian",
+                "Vegan"
+            ]
+        },
+        {
+            "category": "Food",
+            "question": "In a week, how much do you spend on food from restaurants, canteens and takeaways?",
+            "options": [
+                "0",
+                "10-100",
+                "100-500",
+                "More than 600"
+            ]
+        },
+        {
+            "category": "Food",
+            "question": "Of the food you buy, how much is wasted and thrown away?",
+            "options": [
+                "None",
+                "0-10%",
+                "10%-30%",
+                "More than 30%"
+            ]
+        },
+        {
+            "category": "Food",
+            "question": "How often do you buy locally produced food that is not imported to Kenya?",
+            "options": [
+                "A lot of the food I buy is locally sourced",
+                "Some of the food I buy is locally sourced",
+                "I don't worry about where my food comes from"
+            ]
+        },
+        {
+            "category": "Transport",
+            "question": "What kind of vehicle do you travel in most often as driver or passenger?",
+            "hint": "This question is finding out about your private car/motorbike use. We'll ask about public transport next. If you walk or cycle everywhere, just click 'Neither'.",
+            "options": [
+                "Car",
+                "Motorbike",
+                "Neither - I walk, cycle, or use public transport for all my journeys"
+            ]
+        },
+        {
+            "category": "Transport",
+            "question": "How many hours a week do you spend on the train for personal use including commuting?",
+            "hint": "This should include your commute and any other train journeys you make, except business trips (they're part of your employer's footprint, not yours).",
+            "options": [
+                "I don't travel by train",
+                "Under 2 hours",
+                "2 to 5 hours",
+                "5 to 15 hours",
+                "15 to 25 hours",
+                "Over 25 hours"
+            ]
+        },
+        {
+            "category": "Transport",
+            "question": "How many hours a week do you spend on the bus for personal use including commuting?",
+            "hint": "This should include your commute and any other bus journeys you make, except business trips (they're part of your employer's footprint, not yours).",
+            "options": [
+                "I don't travel by bus",
+                "Under 1 hour",
+                "1 to 3 hours",
+                "3 to 6 hours",
+                "6 to 10 hours",
+                "Over 10 hours"
+            ]
+        },
+        {
+            "category": "Transport",
+            "question": "In the last year, how many return flights have you made in total to the following locations?",
+            "hint": "This should not include business trips (they're part of your employer's footprint, not yours). Leave blank if not applicable.",
+            "options": {
+                "Domestic": [
+                    "0",
+                    "1-2",
+                    "3-5",
+                    "More than 5"
+                ],
+                "To/from East Africa": [
+                    "0",
+                    "1-2",
+                    "3-5",
+                    "More than 5"
+                ],
+                "To/from Africa": [
+                    "0",
+                    "1-2",
+                    "3-5",
+                    "More than 5"
+                ]
+            }
+        },
+        {
+            "category": "Transport",
+            "question": "What percentage of your flights do you offset?",
+            "options": [
+                "None of them",
+                "25%",
+                "50%",
+                "75%",
+                "All of them",
+                "Not applicable"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "What kind of house do you live in?",
+            "options": [
+                "Detached",
+                "Semi-detached",
+                "Terrace",
+                "Flat"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "How many bedrooms does your house have?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4 or more"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "How many people (aged 17 and over) live in your house?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5 or more"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "How do you heat your home?",
+            "hint": "Please indicate the primary fuel source that is used. Your energy bill will tell you this.",
+            "options": [
+                "Gas",
+                "Oil",
+                "Electricity",
+                "Wood",
+                "Heat pump"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "Is your electricity on a green tariff?",
+            "hint": "Your tariff is the energy plan you're on. If your electricity is from renewable generation, it will be indicated on your bill.",
+            "options": [
+                "I don't know",
+                "No",
+                "Yes but the tariff is less than 100% renewables",
+                "Yes 100%"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "Do you regularly turn off lights and not leave your appliances on standby?",
+            "options": [
+                "Yes",
+                "No"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "How warm do you keep your home in winter?",
+            "options": [
+                "Below 14\u00b0C",
+                "14\u00b0C - 17\u00b0C",
+                "18\u00b0C - 21\u00b0C",
+                "Over 21\u00b0C"
+            ]
+        },
+        {
+            "category": "Housing",
+            "question": "Which of these home energy efficiency improvements are installed in your home?",
+            "hint": "Select all that apply or leave blank if not applicable.",
+            "options": [
+                "Energy saving lightbulbs",
+                "Loft insulation",
+                "Cavity or solid wall insulation",
+                "Condensing boiler",
+                "Double glazing",
+                "Low flow fittings to taps and showers",
+                "Solar panels",
+                "Solar water heater"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In the last 12 months, have you bought any of these new household items?",
+            "hint": "Select all that apply or leave blank if not applicable. Don't include any second-hand items, just those you bought new.",
+            "options": [
+                "TV, Laptop, or PC",
+                "Large items of furniture",
+                "Washing machine, dishwasher, tumble dryer, or fridge freezer",
+                "Mobile phone or tablet"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In a typical month, how much do you spend on clothes and footwear?",
+            "hint": "Don't include second-hand clothes, just those you bought new.",
+            "options": [
+                "0",
+                "100-1000",
+                "1000-5000",
+                "5000+"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In a typical month, how much do you spend on your pets and pet food?",
+            "hint": "This includes pet food, vet and grooming products, kennels, cages, litter, etc.",
+            "options": [
+                "I don't have a pet",
+                "10-100",
+                "100-1000",
+                "1000+"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In a typical month, how much do you spend on health, beauty, and grooming products?",
+            "options": [
+                "0-500",
+                "500-1000",
+                "1000+"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In a typical month, how much do you spend on phone, internet, and TV contracts?",
+            "options": [
+                "0",
+                "100-1000",
+                "1000-2000",
+                "2000+"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "In a typical month, how much do you spend on entertainment and hobbies (sports/gym, cinema, books, newspapers, gardening, computer games)?",
+            "options": [
+                "100-500",
+                "500-1000",
+                "1000-3000",
+                "3000+"
+            ]
+        },
+        {
+            "category": "Lifestyle",
+            "question": "Which of these types of waste do you recycle and/or compost?",
+            "hint": "Select all that apply or leave blank if not applicable.",
+            "options": [
+                "Food",
+                "Paper",
+                "Tin cans",
+                "Plastic",
+                "Glass"
+            ]
+        }
+    ]
+}
