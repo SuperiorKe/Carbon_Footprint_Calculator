@@ -384,3 +384,18 @@ function generateRecommendations(breakdown) {
     return recommendations.map(rec => `<li>${rec}</li>`).join('');
 }
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('open');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (nav.classList.contains('open') && 
+        !event.target.closest('.menu-items') && 
+        !event.target.closest('.hamburger')) {
+        nav.classList.remove('open');
+    }
+});

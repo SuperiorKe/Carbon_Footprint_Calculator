@@ -7,6 +7,13 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     --text-color: #333;
     --spacing-unit: 20px;
+
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --transition-duration: 0.2s;
+    --min-touch-target: 44px;
+    
 }
 
 body {
@@ -21,7 +28,8 @@ body {
 /* Container Layout */
 .container {
     max-width: 600px;
-    margin: 80px auto 50px;
+    margin: 40px auto 30px;
+    width: 95%;
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
@@ -106,11 +114,12 @@ body {
 .option-label {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    min-height: 44px;
 }
 
 .option-label:hover {
@@ -118,7 +127,9 @@ body {
 }
 
 .option-label input[type="radio"] {
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
 }
 
 .sub-category {
@@ -133,6 +144,33 @@ body {
     justify-content: space-between;
     gap: 10px;
     margin-top: var(--spacing-unit);
+}
+
+/* Hamburger Menu Styles */
+.nav-menu {
+    position: relative;
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--text-color);
+    transition: var(--transition-duration) ease-in-out;
+    opacity: var(--transition-duration) ease-in-out;
+
 }
 
 .btn {
@@ -175,25 +213,218 @@ body {
     .btn {
         transition: none;
     }
+    .hamburger-bar,
+    .menu-items,
+    .nav-menu::before {
+        transition: none;
+    }
 }
 
 /* Responsive Design */
 @media screen and (max-width: 640px) {
     .container {
-        margin: 20px;
-        width: auto;
+        margin: 10px;
+        border-radius: 8px;
     }
 
     .navigation-controls {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 10px;
     }
 
     .btn {
+        padding: 15px 24px;
+        margin: 5px 0;
         width: 100%;
+        font-size: 16px;
+        min-height: var(--min-touch-target);
+    }
+
+    .page-header h1 {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .question-text {
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .question-item {
+        padding: 15px;
+    }
+
+    .results-container {
+        padding: 1rem;
+    }
+
+    .footprint-number {
+        font-size: 2.5rem;
+    }
+
+    .navigation-controls {
+        flex-direction: column-reverse; /* Put 'Next' button on top */
+        gap: 10px;
+    }
+
+    .breakdown-bar {
+        padding: 0.75rem;
+        font-size: 0.9em;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--white);
+        padding: calc(var(--spacing-unit) * 3) var(--spacing-unit) var(--spacing-unit);
+        box-shadow: -2px 0 5px var(--shadow-color);
+        transition: right var(--transition-duration) ease-in-out;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow-y: auto;
+    }
+
+    /* When menu is open */
+    .nav-menu.open 
+        .menu-items {
+            right: 0;
+        }
+        
+        /* Hamburger to X animation */
+        .hamburger-bar {
+        &:first-child {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:last-child {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+    }
+
+     /* Menu Item Styles */
+     .menu-items a {
+        display: block;
+        padding: calc(var(--spacing-unit) / 2);
+        color: var(--text-color);
+        text-decoration: none;
+        transition: background-color var(--transition-duration);
+        border-radius: var(--border-radius-sm);
+
+        &:hover,
+        &:focus {
+            background-color: var(--background-color);
+        }
+
+        /* Ensure touch targets are large enough */
+        min-height: var(--min-touch-target);
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* Add overlay when menu is open */
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition-duration) ease-in-out,
+                    visibility var(--transition-duration) ease-in-out;
+        z-index: 98;
+    }
+
+    .nav-menu.open::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+/* Add touch-friendly improvements */
+@media (hover: none) {
+    .option-label:hover {
+        background-color: var(--white); /* Remove hover state on touch devices */
+    }
+
+    .option-label:active {
+        background-color: #f5f5f5; /* Add touch feedback */
+    }
+
+    .btn:active {
+        opacity: 0.7;
+        transform: translateY(1px);
+    }
+
+    .menu-items a:hover {
+        background-color: transparent;
+    }
+
+    .menu-items a:active {
+        background-color: var(--background-color);
     }
 }
 
-/* Add to your styles.css */
+/* Add landscape orientation support */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        margin: 10px auto;
+    }
+
+    .question-item {
+        padding: 10px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
+}
+
+/* Add loading state for better UX */
+.btn.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Improve form field readability */
+input[type="text"],
+input[type="number"] {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 12px;
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 10px;
+}
+
+.option-label {
+    min-height: var(--min-touch-target);
+}
+
 
 .results-container {
     padding: 2rem;
@@ -270,4 +501,14 @@ body {
 .btn-secondary {
     background-color: var(--secondary-color);
     color: white;
+}
+
+/* Safe Area Inset Support for Modern Mobile Devices */
+@supports (padding: max(0px)) {
+    .menu-items {
+        padding-top: max(calc(var(--spacing-unit) * 3), env(safe-area-inset-top));
+        padding-right: max(var(--spacing-unit), env(safe-area-inset-right));
+        padding-bottom: max(var(--spacing-unit), env(safe-area-inset-bottom));
+        padding-left: max(var(--spacing-unit), env(safe-area-inset-left));
+    }
 }
